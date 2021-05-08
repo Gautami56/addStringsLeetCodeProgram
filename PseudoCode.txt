@@ -1,0 +1,22 @@
+1. Take the arguments as two strings in a function
+2. Initialize empty string to res and carry to 0
+3. Take p1 and store length-1 (for eg if length is 3 take p1 = 2)
+4. Take p2 and store length-1 (for eg if length is 3 take p2 = 2)
+5. Until p1 or p2 is greater than or equal to 0
+    a) Take the string num1 and find character at p1 position - subtract it with '0' to convert to integer  store in i1  
+    b) Take the string num2 and find character at p1 position - subtract it with '0' to convert to integer  store in i2
+    c) Now find the value by adding i1 and i2 and carry - % 10 which will give the remainder - this is the result's first character
+    d) Now find the carry by adding i1 and i2 and carry - / 10 which will give the quotient - this is the result's carry
+    e) Now concat the value with empty string
+    f) Decrement p1 and p2
+    g) Follow point a until p1 and p2 becomes less than 0
+
+6. For the carry in case is not 0 ie it is left out at last, just append it with the string 'res'
+7. Now you get a reversed string. In order to normalize it,
+     a) Split the string using split("")
+     b) Now you get an array - reverse the array using reverse()
+     c) After reversing the array, convert it into string using join("")
+
+8. Return the output
+
+
